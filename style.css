@@ -23,12 +23,6 @@ main {
   padding: 0;
 }
 
-.image-filler {
-  background: #404878;
-  min-width: 100%;
-  min-height: 100%;
-}
-
 div {
 	padding: 1.5vw 2vw;
 }
@@ -57,25 +51,24 @@ hr {
 /** Media **/
 
 .video {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-    margin: 60px 0 0 0;
+  padding: 0;
+  margin: 40px 0 0 0;
 }
-.video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80%;
+
+figure:not(:last-child) {
+  margin-bottom: 60px;
 }
 
 figcaption {
   border-left: 2px solid rgba(64,72,120,0.25);
   font-size: 1.2vw;
-  margin-top: -98px;
   padding-left: 10px;
+  margin-top: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 /** Links **/
@@ -110,14 +103,14 @@ a:link, a:visited {
 
 @font-face {
   font-family: National2Test-Bold;
-  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/National2Test-Bold.otf') format("opentype");
+  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/SourceSansPro-Black.otf') format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: National2Test-ThinItalic;
-  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/National2Test-Thin.otf') format("opentype");
+  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/SourceSansPro-LightIt.otf') format("opentype");
   font-weight: 700;
   font-style: normal;
 }
@@ -144,7 +137,7 @@ h2 {
 }
 
 .numero {
-  color: #404878;
+  color: rgba(64,72,120,0.5);
   font-size: 4vw;
   font-family: National2Test-Bold;
   margin: 0;
@@ -153,9 +146,8 @@ h2 {
 .numero-title {
     text-transform: uppercase;
     font-family: National2Test-Bold;
-    font-size: 2vw;
+    font-size: 1.6vw;
     margin: 0 0 20px 0;
-    opacity: 0.5;
 }
 
 .numero-details {
@@ -173,6 +165,40 @@ p {
   font-size: 1.6vw;
   line-height: 1.4;
   margin-top: 0px;
+}
+
+.quote {
+	/*box-shadow:0 1px 2px rgba(64,72,120,0.1);*/
+	background:none;
+	width:60%;
+	margin:100px auto;
+	padding:50px;
+}
+blockquote {
+	text-align:center;
+	border-top:1px solid #404878;
+	border-bottom:1px solid #404878;
+	position:relative;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:after {
+	color: rgba(64,72,120,0.5);
+	font-family: "Rasa-Bold";
+	content: open-quote;
+	font-size: 80px;
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% - 20px);
+	background: #f4f8f7;
+	height:55px;
+	width: 55px;
+	line-height: normal;
+	text-align: center;
+	transform: translateX(-50%);
+}
+blockquote p {
+	padding: 30px 0 10px 0;
+  font-family: "National2Test-ThinItalic";
 }
 
 /*@media (max-width:xxx) { }*/
