@@ -2,6 +2,8 @@ body, html {
   background: #f4f8f7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -31,7 +33,7 @@ div {
 
 /** Layout **/
 section {
-  margin: 60px 0;
+  margin: 90px 0;
 }
 
 .intro {
@@ -42,6 +44,14 @@ section {
   position: absolute;
   color: #333;
 }
+
+.intro-hr {
+  color: #fff;
+  border: 1px solid #fff;
+  border-bottom: none;
+  opacity: 0.25;
+}
+
 
 hr {
   color: #404878;
@@ -67,9 +77,26 @@ margin: 40px 0 30px 0;
   border-radius: 4px;
 }
 
+.biographies {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-gap: 40px;
+margin: 40px 0 30px 0;
+}
+
+.bio {
+  background: rgba(64,72,120,1);
+  color: #f4f8f7;
+  border-radius: 4px;
+}
+
 .additional {
   padding: 0;
   margin: 0;
+}
+
+footer {
+  padding: 40px 0;
 }
 
 /** Media **/
@@ -81,6 +108,7 @@ margin: 40px 0 30px 0;
 
 figure:not(:last-child) {
   margin-bottom: 60px;
+  padding: 0;
 }
 
 figcaption {
@@ -106,37 +134,46 @@ a:link, a:visited {
 /** Type **/
 @font-face {
   font-family: "Rasa-Regular";
-  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/Rasa-Regular.otf') format("opentype");
+  src: url('./fonts/Rasa-Regular.otf') format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Rasa-Bold";
-  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/Rasa-Bold.otf') format("opentype");
+  src: url('./fonts/Rasa-Bold.otf') format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Rasa-Light";
-  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/Rasa-Light.otf') format("opentype");
+  src: url('./fonts/Rasa-Light.otf') format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: National2Test-Bold;
-  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/SourceSansPro-Black.otf') format("opentype");
+  font-family: "Source Sans Black";
+  src: url('./fonts/SourceSansPro-Black.otf') format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: National2Test-ThinItalic;
-  src: url('/Users/trever.santora/Documents/GitHub/vashon/fonts/SourceSansPro-LightIt.otf') format("opentype");
+  font-family: "Source Sans Thin";
+  src: url('./fonts/SourceSansPro-LightIt.otf') format("opentype");
   font-weight: 700;
   font-style: normal;
+}
+
+.bg {
+  background: url('./img/vashon.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
 }
 
 header {
@@ -145,17 +182,20 @@ header {
   margin: 0 auto;
 }
 
+
+
 h1 {
   font-size:10vw;
   font-family: "Rasa-Bold";
   margin: 0;
-  color: #404878;
+  color: #fff;
+  padding-top: 90px;
 }
 
 h2 {
   font-size:2vw;
-  font-family: "National2Test-ThinItalic";
-  color: #404878;
+  font-family: "Source Sans Thin";
+  color: #fff;
   font-weight: 100;
   font-style: italic;
 }
@@ -163,27 +203,27 @@ h2 {
 .numero {
   color: rgba(64,72,120,0.5);
   font-size: 4vw;
-  font-family: National2Test-Bold;
+  font-family: "Source Sans Black";
   margin: 0;
 }
 
 .numero-title {
     text-transform: uppercase;
-    font-family: National2Test-Bold;
+    font-family: "Source Sans Black";
     font-size: 1.6vw;
     margin: 0 0 20px 0;
 }
 
 .numero-subtitle {
     text-transform: uppercase;
-    font-family: National2Test-Bold;
+    font-family: "Source Sans Black";
     font-size: 1.6vw;
     margin: 40px 0 0 0;
 }
 
 .numero-details {
   text-transform: uppercase;
-  font-family: National2Test-Bold;
+  font-family: "Source Sans Black";
   margin: 20px 0;
   opacity: 0.5;
 }
@@ -191,7 +231,7 @@ h2 {
 .numero-primer {
   color: rgba(255,255,255,0.5);
   font-size: 4vw;
-  font-family: National2Test-Bold;
+  font-family: "Source Sans Black";
   margin: 0;
 }
 
@@ -238,7 +278,7 @@ blockquote:after {
 
 blockquote p {
   padding: 40px 0 16px 0;
-  font-family: "National2Test-ThinItalic";
+  font-family: "Source Sans Thin";
   font-size: 2.5vw;
 }
 
@@ -249,6 +289,11 @@ cite {
   display: block;
   text-align: right;
   float: right;
+}
+
+footer span {
+  font-family: "Source Sans Thin";
+  color: rgba(64,72,120,1);
 }
 
 /** Space **/
@@ -277,4 +322,8 @@ cite {
   margin-bottom: 30px;
 }
 
+.reset {
+  margin: 0;
+  padding: 0;
+}
 /*@media (max-width:xxx) { }*/
