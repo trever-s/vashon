@@ -15,6 +15,7 @@ body {
 main {
   width: 960px;
   margin: 0 auto;
+  margin-top: 800px;
 }
 
 .grid {
@@ -37,7 +38,7 @@ section {
 }
 
 .intro {
-  position: relative;
+  padding-top: 60px;
 }
 
 .intro hr {
@@ -168,11 +169,16 @@ a:link, a:visited {
 }
 
 .bg {
-  background: url('./img/vashon.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
+  /*background: url('./img/vashon.jpg') no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 500px;
 }
 
@@ -182,14 +188,25 @@ header {
   margin: 0 auto;
 }
 
-
+.video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  /*object-fit: contain;*/
+}
 
 h1 {
   font-size:10vw;
   font-family: "Rasa-Bold";
   margin: 0;
   color: #fff;
-  padding-top: 90px;
+  padding-top: 170px;
 }
 
 h2 {
