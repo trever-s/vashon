@@ -107,8 +107,12 @@ footer {
   margin: 40px 0  0;
 }
 
+figure {
+  margin: 0;
+}
+
 figure:not(:last-child) {
-  margin-bottom: 60px;
+  margin-bottom: 60px 0;
   padding: 0;
 }
 
