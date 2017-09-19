@@ -8,7 +8,7 @@ body, html {
 
 body {
   font-size: 1vw;
-  font-family: "Rasa-Regular", Helvetica;
+  font-family: Georgia, "Rasa-Regular", Helvetica;
   color: #404878;
 }
 
@@ -109,6 +109,67 @@ footer {
 
 figure {
   margin: 0;
+  position: relative;
+}
+
+#cover {
+  /*background: url('./img/vashon.jpg') no-repeat center center fixed;*/
+  background-color: rgba(64,72,120,0.98);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.reveal:active {
+  background: #fff;
+  color: rgba(64,72,120,1);
+  focus: none;
+  position: relative;
+  top: 1px;
+  border: none;
+}
+
+.warning {
+  /*border: 1px solid rgba(255,255,255,0.5);*/
+  width: 66%;
+  height: 63%;
+  padding-top: 160px;
+  border-radius: 4px;
+  position: absolute;
+  top: 6%;
+  left: 11%;
+}
+
+.warning h4 {
+  font-family: "Source Sans Black";
+  color: #fff;
+  font-size: 1.6vw;
+}
+
+.warning p {
+  color: #fff;
+}
+
+.warning button {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 3px solid rgba(255, 255, 255, 1);
+  /*border: none;*/
+  /*background: rgba(211, 31, 41, 0.75);*/
+  background: none;
+  color: #fff;
+  font-family: "Source Sans Black";
+  font-size: 1.2vw;
+  font-weight: 700;
+  display: block;
+  margin: 60px auto 30px;
 }
 
 figure:not(:last-child) {
@@ -121,6 +182,13 @@ figcaption {
   font-size: 1.2vw;
   padding-left: 10px;
   margin-top: 10px;
+  font-family: "Source Sans Regular";
+  font-size: 1vw;
+  width: 60%;
+}
+
+figcaption .source {
+  color: #aaa;
 }
 
 img {
@@ -129,7 +197,6 @@ img {
 }
 
 /** Links **/
-
 a:link, a:visited {
   color: #fc0d1b;
   text-decoration: none;
@@ -166,10 +233,17 @@ a:link, a:visited {
 }
 
 @font-face {
-  font-family: "Source Sans Thin";
-  src: url('./fonts/SourceSansPro-LightIt.otf') format("opentype");
-  font-weight: 700;
+  font-family: "Source Sans Regular";
+  src: url('./fonts/SourceSansPro-Regular.otf') format("opentype");
+  font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans Light Italic";
+  src: url('./fonts/SourceSansPro-LightIt.otf') format("opentype");
+  font-weight: 100;
+  font-style: italic;
 }
 
 .bg {
@@ -215,10 +289,9 @@ h1 {
 
 h2 {
   font-size:2vw;
-  font-family: "Source Sans Thin";
+  font-family: "Source Sans Light Italic";
   color: #fff;
   font-weight: 100;
-  font-style: italic;
 }
 
 .numero {
@@ -261,8 +334,8 @@ p:first-child {
 }
 
 p {
-  font-size: 1.6vw;
-  line-height: 1.4;
+  font-size: 1.0625rem;
+  line-height: 1.625rem;
   margin-top: 0px;
 }
 
@@ -299,22 +372,27 @@ blockquote:after {
 
 blockquote p {
   padding: 40px 0 16px 0;
-  font-family: "Source Sans Thin";
+  font-family: "Source Sans Light Italic";
+  font-weight: 100;
   font-size: 2.5vw;
+  line-height: 1.5;
 }
 
 cite {
   font-style: normal;
   color: rgba(64,72,120,0.5);
-  width: 70%;
+  width: 50%;
   display: block;
   text-align: right;
   float: right;
+  font-family: "Source Sans Regular";
+  font-size: 1vw;
 }
 
 footer span {
-  font-family: "Source Sans Thin";
+  font-family: "Source Sans Light Italic";
   color: rgba(64,72,120,1);
+  font-weight: 100;
 }
 
 /** Space **/
@@ -346,5 +424,9 @@ footer span {
 .reset {
   margin: 0;
   padding: 0;
+}
+
+*:focus {
+    outline: none;
 }
 /*@media (max-width:xxx) { }*/
